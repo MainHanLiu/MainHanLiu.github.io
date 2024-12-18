@@ -81,6 +81,10 @@ layout: compress
       {% include {{ _include_path }} %}
     {% endfor %}
 
+    {% if site.backgroud_animation %}
+      {% include animated-background.html %}
+    {% endif %}
+
     {% include_cached search-loader.html lang=lang %}
   </body>
 </html>
