@@ -1,6 +1,6 @@
 ---
 title: "不可重入函数"
-description: ""
+description: 
 date: 2023-07-31 10:00:00 +0800
 categories: [Code, C]
 tags: [Code, C]

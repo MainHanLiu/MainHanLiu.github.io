@@ -1,6 +1,6 @@
 ---
 title: "利用联合体通过串口收发浮点数"
-description: ""
+description: 
 date: 2023-08-22 10:00:00 +0800
 categories: [Code, C]
 tags: [Code, C, Float]

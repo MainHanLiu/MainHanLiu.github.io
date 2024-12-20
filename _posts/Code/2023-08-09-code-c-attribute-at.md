@@ -1,6 +1,6 @@
 ---
 title: "__attribute__((at(...))) 绝对定位"
-description: ""
+description: 
 date: 2023-08-09 10:00:00 +0800
 categories: [Code, C]
 tags: [Code, C, attribute]

@@ -1,6 +1,6 @@
 ---
 title: "Learning Note"
-description: 
+description: 记录的随笔 
 date: 2023-07-01 10:00:00 +0800
 categories: [Learn, Note]
 tags: [Learn, Note]

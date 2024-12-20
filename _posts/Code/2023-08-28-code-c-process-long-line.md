@@ -1,6 +1,6 @@
 ---
 title: "C语言一行太长的换行处理"
-description: ""
+description: 
 date: 2023-08-28 10:00:00 +0800
 categories: [Code, C]
 tags: [Code, C]
