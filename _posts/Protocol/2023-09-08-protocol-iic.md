@@ -134,4 +134,4 @@ DATA1和DATA2均在SCL为高期间产生了起始信号，总线根据其紧接�
 
 ## Reference
 - [# I2C 总线协议初探:STM32 I2C 接口外设学习笔记](https://www.shaoguoji.cn/2017/04/25/study-i2c-bus/)  
-- [# I2C总线规范](http://files.chinaaet.com/files/group/2011/07/24/9007438299002.pdf)  
+- [# I2C总线规范](https://files.chinaaet.com/files/group/2011/07/24/9007438299002.pdf)  
