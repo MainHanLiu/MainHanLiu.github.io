@@ -2,8 +2,8 @@
 title: "ARM与DSP"
 description: 
 date: 2023-08-03 10:00:00 +0800
-categories: [MCU, ARM]
-tags: [MCU, ARM, DSP]
+categories: [Module, ARM]
+tags: [Module, ARM, DSP]
 pin: false
 
 media_subpath: ""
