@@ -2,8 +2,8 @@
 title: Hello World
 description: Here is the description.
 date: 2024-12-16 17:28:00 +0800
-categories: [blog, chirpy]
-tags: [blog, chirpy]
+categories: [Blog, chirpy]
+tags: [Blog, chirpy]
 pin: true
 
 media_subpath: "/"
