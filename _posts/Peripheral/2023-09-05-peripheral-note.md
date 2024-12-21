@@ -13,7 +13,7 @@ media_subpath: ""
 #   alt: Here is the text upder the image
 ---
 
-## adc
+## ADC
 一个ADC的位数是12位，参考电压为3.3V，那么其数字值变化1对应的模拟信号电压变化为3.3V/(2^12)≈0.8mV。想要获得更高的精度，可以选择位数跟高的ADC或者降低参考电压。  
 
 ## DMA
