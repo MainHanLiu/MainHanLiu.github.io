@@ -29,6 +29,7 @@ media_subpath: ""
 
 ### 比对工具
 - beyond compare
+> [# Beyond compare全文件夹内容自动比较，仅显示变化的文件](https://blog.csdn.net/qq_34701838/article/details/119895319)
 
 ***
 
@@ -45,8 +46,15 @@ media_subpath: ""
 
 ***
 
+### 通讯工具
+- Modbus Poll/Slave
+> [modbus工具下载](https://www.modbustools.com/download.html)
+
+*** 
+
 ### Scripts
-- [文库下载脚本](https://greasyfork.org/zh-CN/scripts/437609-%E6%96%87%E5%BA%93%E4%B8%8B%E8%BD%BD%E5%99%A8)
+- greasyfork
+> [文库下载脚本](https://greasyfork.org/zh-CN/scripts/437609-%E6%96%87%E5%BA%93%E4%B8%8B%E8%BD%BD%E5%99%A8)
 
 ***
 

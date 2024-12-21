@@ -51,7 +51,7 @@ C/C++语言编写的程序里数据存储顺序是跟编译平台所在的CPU相
 | 小端 | 0x12345678 |
 
 大端符合传输阅读顺序，小端符合既视阅读顺序  
-**判断大小端**  
+## **判断大小端**  
 联合体union的存放顺序是所有成员都从低地址开始存放，利用该特性可以轻松地获得了CPU对内存采用Little-endian还是Big-endian模式读写  
 ```c
 BOOL IsBigEndian()
@@ -69,7 +69,7 @@ BOOL IsBigEndian()
     return FALSE;
 }
 ```
-**大小端转换**  
+## **大小端转换**  
 对于字数据（16位）：  
 ```c
 #define BigtoLittle16(A) ((((uint16)(A) & 0xff00) >> 8) | \
@@ -81,4 +81,21 @@ BOOL IsBigEndian()
 (( (uint32)(A) & 0x00ff0000) >> 8) | \
 (( (uint32)(A) & 0x0000ff00) << 8) | \
 (( (uint32)(A) & 0x000000ff) << 24))
+```
+
+## 将字节组合成大小端数据
+通过将原来的大小端数据正确排布并进行强制类型转换，从而获得正确的数据分布
+```c
+// 将2字节数组(大端Big Endian次序，高字节在前)转换为16位整数
+uint16_t BEBufToUint16(uint8_t *_pBuf)
+{
+    return (((uint16_t)_pBuf[0] << 8) | _pBuf[1]);
+}
+```
+```c
+//将2字节数组(小端Little Endian，低字节在前)转换为16位整数
+uint16_t LEBufToUint16(uint8_t *_pBuf)
+{
+    return (((uint16_t)_pBuf[1] << 8) | _pBuf[0]);
+}
 ```
