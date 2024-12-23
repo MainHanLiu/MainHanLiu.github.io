@@ -94,6 +94,9 @@ media_subpath: ""
 >原因：.clang-format文件一创建就被立即加密，导致读取文件失败  
 >解决：新建文件后缀.log，并更改vscode读取文件的名称
 
+### clang-format 批量格式化插件：Format Files
+- [# 使用vs code 和 clang-format 批量格式化文件夹下的文件](https://blog.csdn.net/koukouwuwu/article/details/111879677)  
+
 ### VS Code 配置
 - "editor.defaultFormatter": `"ms-vscode.cpptools"`,  
 - "C_Cpp.formatting": `"clangFormat"`,  
