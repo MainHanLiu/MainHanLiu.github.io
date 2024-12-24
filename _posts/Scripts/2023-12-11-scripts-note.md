@@ -1,5 +1,5 @@
 ---
-title: "Scripts NOTE"
+title: "Scripts Note"
 description: 
 date: 2023-12-28 10:00:00 +0800
 categories: [Scripts]
