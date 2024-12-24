@@ -69,7 +69,21 @@ media_subpath: ""
 - Modbus Poll/Slave
 > [modbus工具下载](https://www.modbustools.com/download.html)
 
+- SecureCRT
+
+- Coremail
+>设置邮件分类规则: coremail-设置-管理来信分类 设置邮件分类规则
+
 *** 
+
+### 禁止windows更新工具
+- Windows Update Blocker
+>https://www.52pojie.cn/thread-1797391-1-1.html  
+>https://www.sordum.org/9470/windows-update-blocker-v1-8/  
+>
+>https://yumumu.lanzouw.com/iH1zy0z4pawh  
+
+***
 
 ### Scripts
 - greasyfork
