@@ -44,6 +44,11 @@ media_subpath: ""
 - TortoiseGit
 - SourceTree
 
+>GITHUB访问:
+- https://github.com/521xueweihan/GitHub520  
+- https://github.com/oldj/SwitchHosts  
+- https://github.com/oldj/SwitchHosts/releases  
+
 ***
 
 ### 比对工具
@@ -68,6 +73,9 @@ media_subpath: ""
 ### 通讯工具
 - Modbus Poll/Slave
 > [modbus工具下载](https://www.modbustools.com/download.html)
+- MThings
+- 485USB串口工具驱动
+>[# 绿联USB转串口DB9线驱动 FTDI芯片(Windows系统)丨20206-20208-20218-20221-50773-60562-80434](https://www.lulian.cn/download/18-cn.html)
 
 - SecureCRT
 
