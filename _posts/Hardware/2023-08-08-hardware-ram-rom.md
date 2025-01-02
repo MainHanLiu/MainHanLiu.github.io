@@ -80,6 +80,11 @@ ROM最初不能编程，出厂什么内容就永远什么内容，不灵活；�
     >狭义的EEPROM  
     特点是可以随机访问和修改任何一个字节，可以往每个bit中写入0或者1。这是最传统的一种EEPROM，掉电后数据不丢失，可以保存100年，可以擦写100w次。具有较高的可靠性，但是电路复杂/成本也高。因此目前的EEPROM都是几十KB到几百KB的，绝少有超过512K的。  
 
+    >型号举例：  
+    AT24C256C-SSHL-T  
+    eeprom总容量 256Kbit = 32KB = 64B * 512page  
+    Atmel AT24C256C, 256Kbit(32K * 8bit) Serial EEPROM: The 256K is   internally organized as 512 pages of 64-bytes each  
+
 - Flash存储器  
     Flash存储器是一种基于EEPROM技术的存储器，具有非易失性和高密度的特点。  
     >FLASH属于广义的EEPROM（也算ROM的一种），因为它也是电擦除的ROM，但是为了区别于一般的按字节为单位的擦写的EEPROM，我们都叫它FLASH。FLASH做的改进就是擦除时不再以字节为单位，而是以块为单位，简化了电路，数据密度更高，降低了成本，相比EEPROM更具灵活性和可编程性。

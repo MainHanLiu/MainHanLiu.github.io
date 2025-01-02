@@ -284,6 +284,53 @@ MODBUS 使用一个‘big-Endian’ 表示地址和数据项。这意味着当�
 >报文中字符间的时间间隔可以达一秒。如果有更大的间隔，则接受设备认为发生了错误。   
 >![输入图片说明](/imgs/protocol-rs485-modbus/2023-09-12/oQKtNg8MWYjTvMVx.png)
 
+#### T1.5以及T3.5时间间隔
+T1.5和T3.5时间是实现RTU接收驱动程序过程中非常重要的两个概念。
+
+- T1.5用来描述同一modbus报文帧内部两个字符之间的传输间隔时间
+>实际工程应用中T1.5机制使用比较少，一般忽略
+
+- T3.5用来描述两个不同modbus报文帧之间的传输间隔时间
+>当前数据帧的结束字符与下一个数据帧的起始字符传输时间间隔
+
+Modbus-RTU通讯建立在底层串口通讯的基础之上。当串口的一个接收中断到来表明已完成一个字符的接收。Modbus-Rtu通讯是连续的字符流。那么就引出一个问题，在连续的字符流之中如何判断一帧数据的起始和结束呢？
+
+要解决以上的这个问题，Modbus-Rtu引入了一个T3.5的时间间隔。在串口接收的连续字符流之中若出现两个字符之间的接收时间间隔超过3.5个字符时间，则判断为两个数据帧的间隔。
+
+接收驱动程序上实现的思路是：  
+串口在接收到一个字符（假设字符’a’）时便开始计时,时间记为Time1，在接收到下一个字符(假设字符‘b’)时，时间记为Time2。如果Time2 - Time1的时间差值大于3.5个字符时间，则判断字符‘b’为下一数据帧的起始字符。字符‘a’为本帧数据的结束字符。
+
+不同的波特率下，数据帧之间的传输时间间隔是不一样的。
+
+**计算方式**  
+波特率含义是每秒传输的二进制位的个数，比如9600bps，意思就是说每1秒（也就是1000毫秒）传输9600个bit位，反过来说传输9600个二进制位需要1000毫秒
+
+Modbus 通讯时规定主机发送完一组命令必须间隔3.5个字符再发送下一组新命令，这个3.5字符主要用来告诉其他设备这次命令（数据）已结束，而这个3.5字符的时间间隔采用以下方式计算：
+
+1个字符可能包括1位起始位、8位数据位（一般情况）、1位校验位（或者没有）、1位停止位（一般情况下）。    
+
+因此1个字符可能包括11位/10位bit（没有校验位），那么有以下两种情况
+1. 1个字符包括11位   
+3.5个字符就是3.5 * 11 = 38.5位  
+传输38.5个二进制位需要的时间是：38.5 / 9600 * 1000 = 4.0104167毫秒。
+>每个字节的发送和接收需要11 / 9600 = 1.146ms
+
+2. 1个字符包括10位   
+那么3.5个字符就是3.5 * 10 = 35位  
+传输35个二进制位需要的时间是：35 / 9600 * 1000 = 3.6458333毫秒。
+>每个字节的发送和接收需要10 / 9600 = 1.042ms
+
+MODBUS RTU要求一帧数据起始和结束至少有大于等于3.5个字符的时间，在波特率为9600、11位的情况下，只要大于4.0104167毫秒即可。
+
+一般，为了简单起见，可以将传输 45 bit的时间四舍五入后的整型值作为两个数据帧之间的时间间隔，并以此来判断报文接收的完整性。
+
+>帧间隔不能过低，否则同一帧字节间可能（1.04ms-1.5ms）会被分割    
+>帧间隔不能过大，否则相邻报文帧之间需要人为增加间隔，当查询速率较快时会发生粘包  
+
+## 终端电阻
+[# RS485总线上终端电阻的作用](https://mp.weixin.qq.com/s?__biz=Mzg3ODU3Nzk3MQ==&mid=2247510790&idx=2&sn=d21ae136d3132e4a9dfebdc26634362f&chksm=ce22f0d4850d35085cfe5b7ba044e9359d97de8e98e3b5b6ad289efac3c4b8bba558b8e9f880&xtrack=1&scene=90&subscene=93&sessionid=1718536100&flutter_pos=14&clicktime=1718536372&enterid=1718536372&finder_biz_enter_id=4&ranksessionid=1718536244&ascene=56&fasttmpl_type=0&fasttmpl_fullversion=7250619-zh_CN-zip&fasttmpl_flag=0&realreporttime=1718536372271&devicetype=android-31&version=4.1.30.6004&nettype=WIFI&abtest_cookie=AAACAA==&lang=zh_CN&session_us=gh_6789862d4e48&exportkey=n_ChQIAhIQqVHNOWTLbDGOU3LjizuzMRLxAQIE97dBBAEAAAAAAD%2b7KteklvcAAAAOpnltbLcz9gKNyK89dVj06EkJfOZ7ckEc7tC2Za3qnSC3Aqb9R5RA%2bSmdrzSlKDPP12N95IjqqzXjEk3YK6pmKpSVP9pBj1yMIHtFWdGa9/xKqWwYxLMv/nyr9br6iInL7x9vy47x9BYo5EBdqcLH2ResLX0O8mBwbg4d3G%2bYXTX6UwzCgcGJpXMlaOTlX22hnd0cFONJjqV4aourZXEhQsg3z1uRshC7pudGAduBpIkqFpLz4X5llC/2Y4eunQma2FAgM15DbxsOIB/QChokwVw0p0n9oFXFnWY=&pass_ticket=qgtnNQmxNNZH7bGCS6P2f4hvst842xYTuyVL7eeuwlXvi0iLPRo7HELEKCphNdZF&wx_header=3&from=industrynews&platform=win&nwr_flag=1#wechat_redirect)
+
+
 ## Modbus 无法连接问题排查方式
 - 检查接线是否稳定
 - 检查接线引脚是否接错
@@ -292,6 +339,9 @@ MODBUS 使用一个‘big-Endian’ 表示地址和数据项。这意味着当�
 - 使用模拟从机时,若重新插拔过USB,可能存在模拟软件仍然显示正常连接且能看到数据交互，但实际通信链路上并没有回复成功，需要在软件上重新打开连接(软件bug?)
 >Modbus Poll能看到向外查询但无回复(但通信线路上实际未成功发送查询)  
 >Modbus Slave能看到外部发来的查询指令和模拟返回的回复指令(但信线路上实际未回复)
+- 检查查询指令是否符合协议
+- 检查485工具是否损坏
+>举例：485工具损坏，硬件上无法发送仅能接收，此时MThings界面仍然显示在正常发送，但实际未发送成功(软件已发送但硬件无法支持)
 
 ## QA
 - 提问1  
@@ -305,6 +355,7 @@ MODBUS 使用一个‘big-Endian’ 表示地址和数据项。这意味着当�
 ## Third Library 第三方实现库
 **libmodbus**
 - [# libmodbus：与 Modbus 设备通信的最流行的开源库](https://libmodbus.org/)
+- [# Modbus驱动库—libmodbus驱动库的使用](https://blog.csdn.net/whik1194/article/details/119010616)
 
 ## Reference
 - [# 一文看懂RS-485总线](https://www.eet-china.com/mp/a63373.html)  

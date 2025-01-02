@@ -39,8 +39,8 @@ media_subpath: ""
 | 快捷键 | 作用 |
 |-- |--|
 | Ctrl + P | 搜索文件  |
-| Ctrl+Shift+O | 搜索符号  |
-| Ctrl + T | 搜索使用（更广泛？）  |
+| Ctrl+Shift+O | 搜索符号 |
+| Ctrl + T | 搜索使用（更广泛？） |
 | Alt + LeftArrow/RightArrow| 设置视图切换  |
 
 ## Tips
@@ -49,11 +49,33 @@ media_subpath: ""
 
 - 左侧的搜索栏（放大镜）可进行全局的任意文字和英文搜索
 
+- 创建函数的定义和声明  
+[# VS Code C++ 扩展：自动创建函数的定义和声明](https://www.topomel.com/archives/5101.html)  
+[# 重构 C++ 代码](https://vscode.js.cn/docs/cpp/cpp-refactoring)  
+
+- 删除注释  
+[# VScode使用正则表达式快速删除注释](https://blog.csdn.net/yjjjjz/article/details/89521414)
+
+| 正则表达式 | 含义 |
+|-- |--|
+| `//[\s\S]*?\n` | 单行注释  |
+| `/\*(.|\r\n|\n)*?\*/` | 块注释（多行注释）|
+| `\/\*[\s\S]*\*\/|\/\/.*` | 所有注释 |
+| Alt + LeftArrow/RightArrow| 设置视图切换 |
+
+
 ## 插件
 - Git Graph
+
 - GitLens
+>[# vscode隐藏内联git信息(gitlens)](https://blog.csdn.net/braised_fish/article/details/126364531) 
+
 - vscode-icons
+
 - Format Files
+
+- Select Line Status Bar
+>[# Select Line Status Bar （计算所选中的行数）](https://marketplace.visualstudio.com/items?itemName=tomoki1207.selectline-statusbar)
 
 ## Reference
 - [# VScode 常用快捷键汇总](https://learnku.com/articles/34744)

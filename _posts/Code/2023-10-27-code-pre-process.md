@@ -125,3 +125,6 @@ char foo(int a){...}
 pFun = foo;   
 (*pFun)(2);    
 ```
+
+## Reference
+- [#、##、__VA_ARGS__和##__VA_ARGS__的作用](https://blog.csdn.net/q2519008/article/details/80934815)

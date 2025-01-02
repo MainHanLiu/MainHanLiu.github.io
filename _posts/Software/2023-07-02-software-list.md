@@ -18,6 +18,7 @@ media_subpath: ""
 ### IDE 烧录类
 - Keil5
 - JLink
+- Source Insight 4.0
 
 ***
 
@@ -73,7 +74,28 @@ media_subpath: ""
 ### 通讯工具
 - Modbus Poll/Slave
 > [modbus工具下载](https://www.modbustools.com/download.html)
+
 - MThings
+>下载地址：http://gulink.cn/download
+>
+>间隔时间：  
+>模拟主机模式下，该时间生效于收到响应（超时）之后。  
+>模拟从机模式下，该时间生效于请求与响应之间。  
+>如数据项与其它数据项合并为一个请求/响应，间隔时间取其中最大值。  
+>![输入图片说明](/imgs/software-list/2024-05-22/CgEW3MOCqRayiE4a.png)
+>![输入图片说明](/imgs/software-list/2024-05-22/Z9Ms0xGIJX0CsYwT.png)
+>
+>模拟主机和模拟从机之间可以相互拷贝数据配置。 
+> 
+>MThings 支持导出数据模板功能  
+>
+>MThings 支持用户基于创建的模拟主机设备发送自定义报文，报文需遵循MODBUS 协议要求。用户只需填入报文 PDU 部分，MThings 自动适应设备所使用的协议类型，添加报文首尾，最终发送完整报文。
+>
+>MThings 自定义功能支持统计报文请求延迟时间，支持持续曲线监控延迟时间，可用于观察从机的性能和可靠性。  
+
+- MODBUS调试助手
+- [# armfly modbus调试助手](https://www.armbbs.cn/forum.php?mod=viewthread&tid=10088)
+
 - 485USB串口工具驱动
 >[# 绿联USB转串口DB9线驱动 FTDI芯片(Windows系统)丨20206-20208-20218-20221-50773-60562-80434](https://www.lulian.cn/download/18-cn.html)
 
@@ -96,6 +118,28 @@ media_subpath: ""
 ### Scripts
 - greasyfork
 > [文库下载脚本](https://greasyfork.org/zh-CN/scripts/437609-%E6%96%87%E5%BA%93%E4%B8%8B%E8%BD%BD%E5%99%A8)
+
+***
+
+### 资源类
+- 电子书Pdf搜索
+>[z-library](https://z-library.io/)
+
+- Windows /Office  激活
+>[# HEU_KMS_Activator_v42.2.0](https://github.com/zbezj/HEU_KMS_Activator/releases)
+
+***
+
+### 效率类
+- 滴答清单
+- Snipaste-2.8.5-Beta-x64
+- Everything
+
+***
+
+### 其他
+- Notepad++
+- TrafficMonitor
 
 ***
 

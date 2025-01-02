@@ -2,7 +2,7 @@
 title: "干接点 / 湿节点"
 description: 
 date: 2023-08-31 10:00:00 +0800
-categories: [Learn, Note]
+categories: [Learn]
 tags: [Learn, Note]
 pin: false
 

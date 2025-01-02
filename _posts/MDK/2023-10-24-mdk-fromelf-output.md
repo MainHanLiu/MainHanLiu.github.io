@@ -1,5 +1,5 @@
 ---
-title: "keil - After Build使用fromelf或运行脚本"
+title: "KEIL - After Build使用fromelf或运行脚本"
 description: 
 date: 2023-10-24 10:00:00 +0800
 categories: [MDK]
