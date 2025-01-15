@@ -23,3 +23,7 @@ package-lock.json
 !.vscode/tasks.json
 
 # Misc
+
+# DIR
+/_posts/Project
+/imgs/project-collect

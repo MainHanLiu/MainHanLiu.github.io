@@ -18,10 +18,10 @@ media_subpath: ""
 **VS插件：Doxygen Documentation Generator**
 
 - 配置setting.json
-```json
+```c
 {
     // Doxygen documentation generator set
-    "doxdocgen.c.triggerSequence": "/", // 触发自动注释的生成
+    "doxdocgen.c.triggerSequence": "/*", // 触发自动注释的生成
     "doxdocgen.c.commentPrefix": " * ", // 注释行的前缀
     "doxdocgen.c.firstLine": "/**", // 注释行的首行
     "doxdocgen.c.lastLine": "*/", // 注释行的尾行
@@ -40,8 +40,8 @@ media_subpath: ""
     // 文件注释的组成及其排序
     "doxdocgen.file.fileOrder": [
         "custom",
-        "file", // @file
         "brief", // @brief 简介
+        "file", // @file
         "author", // 作者
         "version", // 版本
         "date", // 日期
@@ -53,30 +53,39 @@ media_subpath: ""
     // 下面时设置上面标签tag的具体信息
     "doxdocgen.file.fileTemplate": "@file {name}",
     "doxdocgen.file.versionTag": "@version 0.0.1",
-    "doxdocgen.generic.authorEmail": "xx@xx.com",
+    "doxdocgen.generic.authorEmail": "authorName@xx.com",
     "doxdocgen.generic.authorName": "authorName",
-    "doxdocgen.generic.authorTag": "@author {author} ({email})",
+    "doxdocgen.generic.authorTag": "@authorName      {author} ({email})",
     // // 日期格式与模板
-    // "doxdocgen.generic.dateFormat": "YYYY-MM-DD",
-    // "doxdocgen.generic.dateTemplate": "@date {date}",
+    "doxdocgen.generic.dateFormat": "YYYY-MM", // "YYYY-MM-DD"
+    "doxdocgen.generic.dateTemplate": "@date {date}",
     // 文件注释：版权信息模板
     "doxdocgen.file.copyrightTag": [
         "@copyright Copyright (c) {2023}  ****** Company"
     ],
     "doxdocgen.file.customTag": [
+
         "************************************************************************",
     ],
     // 根据自动生成的注释模板（目前主要体现在函数注释上）
     "doxdocgen.generic.order": [
+
         "brief",
         "tparam",
         "param",
         "return",
+        "custom", // 自定义
         // "author",
         // "date"
     ],
+    "doxdocgen.generic.briefTemplate": "@brief       {text}",
     "doxdocgen.generic.paramTemplate": "@param  [in] {indent:8}{param}{indent:8}",
     "doxdocgen.generic.returnTemplate": "@return {indent:8}{type} ",
+    "doxdocgen.generic.customTags": [
+        "@retval      0，正常",
+        "@retval      < 0，异常，详情见errors.h",
+        "@warning     无",
+    ],
     "doxdocgen.generic.splitCasingSmartText": true,
     "doxdocgen.generic.includeTypeAtReturn": true, // return 中包含类型信息
     "doxdocgen.generic.boolReturnsTrueFalse": false, // bool 返回值拆分成 true 和 false 两种情况
