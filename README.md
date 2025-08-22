@@ -1,3 +1,28 @@
+## 仓库使用说明
+### 环境搭建（补充记录，待实践）
+按照 [Jekyll文档](https://jekyllrb.com/docs/installation/) 中的说明完成 Ruby 、 RubyGems 、 Jekyll 和 Bundler 的安装。
+
+[官方指导](https://chirpy.cotes.page/posts/getting-started/)
+Steps:
+1. Follow the Jekyll installation guide to install Jekyll and ensure Git is installed.
+2. Clone your repository to your local machine.
+3. If you forked the theme, install Node.js and run bash tools/init.sh in the root directory to initialize the repository.
+4. Run command bundle in the root of your repository to install the dependencies.
+
+### 快捷脚本
+
+#### 挂载虚拟机共享文件夹
+```bash
+根目录下运行
+sudo ./scripts/mount_share.sh 
+```
+
+#### 运行本地blog
+```bash
+根目录下运行
+./run_blog.sh
+```
+
 <!-- markdownlint-disable-next-line -->
 <div align="center">
 
