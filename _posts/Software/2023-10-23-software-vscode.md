@@ -63,6 +63,7 @@ media_subpath: ""
 | `\/\*[\s\S]*\*\/|\/\/.*` | 所有注释 |
 | Alt + LeftArrow/RightArrow| 设置视图切换 |
 
+- 按住ALT后，左键多次点击不同的位置，可以在这些位置同时生成光标操作
 
 ## 插件
 - Git Graph
@@ -76,6 +77,8 @@ media_subpath: ""
 
 - Select Line Status Bar
 >[# Select Line Status Bar （计算所选中的行数）](https://marketplace.visualstudio.com/items?itemName=tomoki1207.selectline-statusbar)
+
+- Tab to Space
 
 ## settings.json
 ```c
