@@ -10,7 +10,7 @@ media_subpath: ""
 #
 # image:
 #   path: 'assets/**/**.jpg'
-#   alt: Here is the text upder the image
+#   alt: Here is the text under the image
 ---
 ## 电磁干扰
 由于铜是非常好的导体，所以它对电磁信号无任何限制。当两根非常接近的铜线都在传导电信号时，就会出现一定的电磁干扰，这种干扰称作串扰。此外，电磁现象无所不在，这便导致TP传输或接收到了一些从其它地方传来干扰信号。

@@ -10,7 +10,7 @@ media_subpath: ""
 #
 # image:
 #   path: 'assets/**/**.jpg'
-#   alt: Here is the text upder the image
+#   alt: Here is the text under the image
 ---
 
 ![输入图片说明](/imgs/git-book-reference/2023-11-17/kOAL2OWj7bWgq7iW.png)

@@ -10,7 +10,7 @@ media_subpath: ""
 #
 # image:
 #   path: 'assets/**/**.jpg'
-#   alt: Here is the text upder the image
+#   alt: Here is the text under the image
 ---
 
 在初写STM32程序时，遇到一个困惑，STM32的Flash在MDK里被设置为起始地址0x0800 0000，而CM3手册规定芯片复位时要从0x0000 0000地址开始取出中断向量 ，那STM32怎么样执行代码呢？地址重映射？或者在0x0000 0000里有对应有实际存储器？

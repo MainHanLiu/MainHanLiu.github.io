@@ -10,7 +10,7 @@ media_subpath: ""
 #
 # image:
 #   path: 'assets/**/**.jpg'
-#   alt: Here is the text upder the image
+#   alt: Here is the text under the image
 ---
 
 [# keil系列教程1-15](https://www.strongerhuang.com/Keil/Keil%E7%B3%BB%E5%88%97%E6%95%99%E7%A8%8B.html)  

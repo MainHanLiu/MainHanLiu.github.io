@@ -10,7 +10,7 @@ media_subpath: ""
 #
 # image:
 #   path: 'assets/**/**.jpg'
-#   alt: Here is the text upder the image
+#   alt: Here is the text under the image
 ---
 
 ## **使用extern和包含头文件来引用函数有什么区别呢？**  

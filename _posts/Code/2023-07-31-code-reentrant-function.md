@@ -10,7 +10,7 @@ media_subpath: ""
 #
 # image:
 #   path: 'assets/**/**.jpg'
-#   alt: Here is the text upder the image
+#   alt: Here is the text under the image
 ---
 
 如果中断处理函数中调用了 printf 函数，因为中断处理函数的调用了不可重入函数，导致中断丢失和系统位置错误，这里直接导致嵌入式 linux 系统应用进程中的所有线程停掉，进而导致看门狗进程得不到喂狗，设备重启。  

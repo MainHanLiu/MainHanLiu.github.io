@@ -10,7 +10,7 @@ media_subpath: ""
 #
 # image:
 #   path: 'assets/**/**.jpg'
-#   alt: Here is the text upder the image
+#   alt: Here is the text under the image
 ---
 ## .map文件
 要知道代码、常量、全局、局部变量存储在哪儿，就需要了解FLASH和RAM的一些特性，在工程中要具体分析其大小及对应存储地址，可以从map文件中分析。  

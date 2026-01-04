@@ -10,7 +10,7 @@ media_subpath: ""
 #
 # image:
 #   path: 'assets/**/**.jpg'
-#   alt: Here is the text upder the image
+#   alt: Here is the text under the image
 ---
 
 在C语言程序编写中，我们有时会遇到一行代码太长而影响阅读或者出现与部分公司或组织要求的编码规范不符的情况，此时我们需要将这行代码分成多行来写。

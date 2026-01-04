@@ -10,7 +10,7 @@ media_subpath: ""
 #
 # image:
 #   path: 'assets/**/**.jpg'
-#   alt: Here is the text upder the image
+#   alt: Here is the text under the image
 ---
 
 ![输入图片说明](/imgs/mdk-register-map/2023-11-01/fJBmoLGaXXExi0K2.png)  

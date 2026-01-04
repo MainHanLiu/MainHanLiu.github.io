@@ -10,7 +10,7 @@ media_subpath: ""
 #
 # image:
 #   path: 'assets/**/**.jpg'
-#   alt: Here is the text upder the image
+#   alt: Here is the text under the image
 ---
 
 - 在多线程编程下,要注意缓存buf不能进行复用,容易产生污染数据,或着在同一个缓存buf的不同操作中使用互斥锁进行保护

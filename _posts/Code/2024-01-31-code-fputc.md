@@ -10,7 +10,7 @@ media_subpath: ""
 #
 # image:
 #   path: 'assets/**/**.jpg'
-#   alt: Here is the text upder the image
+#   alt: Here is the text under the image
 ---
 
 printf 是一个库函数，用户不知道源代码，因此当需要输出到 LCD、串口1、串口2等不同的地方时，我们不可能去修改标准库的源码。

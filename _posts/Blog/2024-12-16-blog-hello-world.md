@@ -10,7 +10,7 @@ media_subpath: "/"
 #
 image:
   path: 'assets/img/hello_world.jpg'
-  alt: Here is the text upder the image
+  alt: Here is the text under the image
 #
 # math: true
 # #

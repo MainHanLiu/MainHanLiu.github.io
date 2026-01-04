@@ -10,7 +10,7 @@ media_subpath: ""
 #
 # image:
 #   path: 'assets/**/**.jpg'
-#   alt: Here is the text upder the image
+#   alt: Here is the text under the image
 ---
 
 对某一485通道挂载的设备地址不确定/修改了但不记得，可使用此方式遍历寻址

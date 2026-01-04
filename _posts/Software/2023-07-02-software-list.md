@@ -10,7 +10,7 @@ media_subpath: ""
 #
 # image:
 #   path: 'assets/**/**.jpg'
-#   alt: Here is the text upder the image
+#   alt: Here is the text under the image
 ---
 
 ***
@@ -100,6 +100,8 @@ media_subpath: ""
 >[# 绿联USB转串口DB9线驱动 FTDI芯片(Windows系统)丨20206-20208-20218-20221-50773-60562-80434](https://www.lulian.cn/download/18-cn.html)
 
 - SecureCRT
+
+- putty
 
 - Coremail
 >设置邮件分类规则: coremail-设置-管理来信分类 设置邮件分类规则

@@ -10,7 +10,7 @@ media_subpath: ""
 #
 # image:
 #   path: 'assets/**/**.jpg'
-#   alt: Here is the text upder the image
+#   alt: Here is the text under the image
 ---
 
 upstream 分支可以定义为我们的本地分支（也称为远程跟踪分支）在远程仓库上遵循的分支。当我们需要将默认远程分支设置为我们当前的本地分支时，我们必须运行 git upstream 命令。

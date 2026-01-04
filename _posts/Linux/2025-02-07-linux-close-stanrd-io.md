@@ -10,7 +10,7 @@ media_subpath: ""
 #
 # image:
 #   path: 'assets/**/**.jpg'
-#   alt: Here is the text upder the image
+#   alt: Here is the text under the image
 ---
 
 /dev/null 是 Linux/Unix 系统的“黑洞”文件，向其写入的任何数据都会被丢弃，从中读取的数据总是 EOF（文件结束）。
