@@ -99,9 +99,15 @@ media_subpath: ""
 - 485USB串口工具驱动
 >[# 绿联USB转串口DB9线驱动 FTDI芯片(Windows系统)丨20206-20208-20218-20221-50773-60562-80434](https://www.lulian.cn/download/18-cn.html)
 
+- MobaXterm
+>使用新版本V25.4报错无法连接，旧版本V23.3可正常连接，原因未知
+
 - SecureCRT
 
 - putty
+
+- WinScp
+>使用新版本V6.5.5报错无法连接，旧版本V6.1.2可正常连接，原因未知
 
 - Coremail
 >设置邮件分类规则: coremail-设置-管理来信分类 设置邮件分类规则
@@ -136,6 +142,15 @@ media_subpath: ""
 - 滴答清单
 - Snipaste-2.8.5-Beta-x64
 - Everything
+- FastCopy
+- [Files-文件夹标签管理,可在Github直接下载安装包](https://github.com/files-community/files/)
+- StackEidt 在线笔记
+
+***
+
+### 压缩工具
+- WinRAR
+- 7-Zip（有些无法兼容解压的文件使用7-Zip可以正常解压）
 
 ***
 
@@ -146,5 +161,19 @@ media_subpath: ""
 ***
 
 ### Chrome Extension app
+- 滚动屏幕截图工具和屏幕捕获  
+- AdBlock - 拦截整个网络的广告  
+- 提醒应用程序 - Reminder  
+- Vue.js devtools  
+- 篡改猴Tampermonkey  
+
+***
+
+### 篡改猴Tampermonkey-脚本
+[greasyfork](https://greasyfork.org/zh-CN)  
+- 解除网站不允许复制的限制，专治流氓
+- CSDNGreener CSDN广告完全过滤-免登录-个性化排版-最强老牌脚本-持续更新
+- 屏蔽广告-屏蔽谷歌广告、百度广告、知乎广告、隐藏谷歌和百度搜索增强百度搜索结果的各种广告
+- 自动展开豆瓣、站长之家、米坛、cnbeta、知乎、慕课网、Awesomes、喜马拉雅、CSDN博客、CSDN下载、道客88、百度文库、百度知道、回形针、人民日报客户端、凤凰网页面的隐藏内容
 
 ***

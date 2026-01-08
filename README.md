@@ -20,7 +20,7 @@ sudo ./scripts/mount_share.sh
 #### 运行本地blog
 ```bash
 根目录下运行
-./run_blog.sh
+./scripts/run_blog.sh
 ```
 
 <!-- markdownlint-disable-next-line -->
